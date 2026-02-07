@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For my Love</title>
+    <link rel="stylesheet" href="firstpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div id="cardContent">
+    <h1>Hey Babyyy!!</h1>
+    <p>I got something for you. Wanna see?</p>
+    <div class="Buttonspace">
+    <button class="yesButton">Yes</button>
+    <button class="yesButton">Obviously Yes</button>
+    </div>
+    </div>
+    <img id="thumbnail" src="images/click me.jpeg" alt="Card cover">
+    <img id="roseImage" src="images/rose.jpeg" alt="Rose doodle">
+    <p id="roseMessage">Happy Rose Day, my lovee ♥</p>
+    </div>
+
+    <script>
+     const buttons = document.querySelectorAll(".yesButton");
+    const cardContent = document.getElementById("cardContent");
+    const rose = document.getElementById("roseImage");
+    const roseMessage = document.getElementById("roseMessage");
+
+    buttons.forEach(button => {
+    button.addEventListener("click", () => {
+    cardContent.style.display = "none";
+    rose.style.display = "block"; 
+    roseMessage.style.display = "block";      
+    buttons.forEach(btn => btn.disabled = true); 
+  });
+});
+
+    </script>
+    
+</body>
+</html>
